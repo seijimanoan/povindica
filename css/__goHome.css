@@ -1,0 +1,40 @@
+*
+{	font-family: "roboto", sans-serif; -webkit-font-smoothing: antialiased;
+}
+.full_background
+{	display: block; position: absolute; z-index: -1;
+	/*
+	background: #2f3255 url(../img/bg_home_main.jpg) no-repeat center right fixed; background-size: cover;
+	*/
+	/*
+	font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background: #000 url(../img/bg_home_main.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	*/
+	top: 41px; bottom: 0; left: 0; right: 0;
+	overflow-y: auto; overflow-x: hidden;
+}
+.white_box
+{	max-width: none; padding: 19px 29px 29px; margin: 0; background-color: #fff;
+	border: 1px solid #e5e5e5; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05); box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.dark-caption
+{	background: rgba(0, 0, 0, .5);
+	-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+}
+.background_white
+{	background: #FFF;
+}
+.background_dark
+{	background: #45484d;
+	background: -moz-linear-gradient(left,  #45484d 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#45484d), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(left,  #45484d 0%,#000000 100%);
+	background: -o-linear-gradient(left,  #45484d 0%,#000000 100%);
+	background: -ms-linear-gradient(left,  #45484d 0%,#000000 100%);
+	background: linear-gradient(to right,  #45484d 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 );
+}

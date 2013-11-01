@@ -1,0 +1,121 @@
+TABELAS MYSQL A SEREM CRIADAS PARA USO
+
+Use as seguintes queries para criar as entidades no banco de dados do projeto. No desenvolvimento foi utilizado o MariaDB 5.5.
+
+TABELA demdocs
+CREATE TABLE `demdocs` (
+	`uid` INT(10) UNSIGNED NOT NULL,
+	PRIMARY KEY (`uid`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB;
+
+
+TABELA demnotes
+CREATE TABLE `demnotes` (
+	`uid` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`timestamp` DATETIME NULL DEFAULT NULL,
+	`nomeUsuario` VARCHAR(50) NULL DEFAULT NULL,
+	`contaUsuario` VARCHAR(50) NULL DEFAULT NULL,
+	`codigoReferencia` FLOAT NULL DEFAULT NULL,
+	`codigoModulo` INT(10) UNSIGNED NULL DEFAULT '0',
+	`textoItem` TEXT NULL,
+	`tipoItem` INT(10) UNSIGNED NULL DEFAULT '0',
+	`respostaItem` INT(10) UNSIGNED NULL DEFAULT '0',
+	`flagItem` INT(10) UNSIGNED NULL DEFAULT '0',
+	PRIMARY KEY (`uid`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=52;
+
+
+TABELA demperms
+CREATE TABLE `demperms` (
+	`uid` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`timestamp` DATETIME NULL DEFAULT NULL,
+	`whom` VARCHAR(50) NULL DEFAULT NULL,
+	`type` VARCHAR(5) NULL DEFAULT NULL,
+	`banned` INT(1) UNSIGNED NULL DEFAULT '0',
+	`what` INT(4) UNSIGNED NULL DEFAULT NULL,
+	`author` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`uid`),
+	UNIQUE INDEX `whom-what` (`whom`, `what`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2;
+
+
+TABELA demrefers
+CREATE TABLE `demrefers` (
+	`uid` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`codigoModulo` INT(11) UNSIGNED NOT NULL,
+	`codigoReferencia` FLOAT UNSIGNED NOT NULL,
+	`codigoItem` INT(11) UNSIGNED NOT NULL,
+	`codigoSubItem` INT(11) UNSIGNED NOT NULL,
+	`nomeReferencia` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`uid`),
+	INDEX `codigoModulo` (`codigoModulo`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=6;
+
+
+TABELA demtools
+CREATE TABLE `demtools` (
+	`uid` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`timestamp` DATETIME NULL DEFAULT NULL,
+	`name` VARCHAR(50) NULL DEFAULT NULL,
+	`modular` VARCHAR(50) NULL DEFAULT NULL,
+	`description` VARCHAR(50) NULL DEFAULT NULL,
+	`author` VARCHAR(50) NULL DEFAULT NULL,
+	`version` FLOAT UNSIGNED NULL DEFAULT '0',
+	`job` VARCHAR(50) NULL DEFAULT NULL,
+	`type` VARCHAR(3) NULL DEFAULT NULL,
+	`ordering` INT(3) UNSIGNED NULL DEFAULT '10',
+	PRIMARY KEY (`uid`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2;
+
+
+TABELA usuarios
+CREATE TABLE `usuarios` (
+	`uid` INT(4) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(90) NOT NULL COLLATE 'latin1_bin',
+	`login` VARCHAR(25) NOT NULL COLLATE 'latin1_bin',
+	`senha` CHAR(32) NOT NULL COLLATE 'latin1_bin',
+	`email` VARCHAR(64) NOT NULL COLLATE 'latin1_bin',
+	`nivel_acesso` INT(1) NOT NULL DEFAULT '0',
+	`codigoCPF` DECIMAL(11,0) UNSIGNED ZEROFILL NULL DEFAULT NULL,
+	`tituloEleitor` DECIMAL(12,0) UNSIGNED ZEROFILL NULL DEFAULT NULL,
+	`nomeEleitor` VARCHAR(100) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	`zonaEleitor` INT(10) NULL DEFAULT NULL,
+	`secaoEleitor` INT(10) NULL DEFAULT NULL,
+	`localEleitor` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	`lograEleitor` VARCHAR(100) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	`cidadeEleitor` VARCHAR(100) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	`estadoEleitor` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	`dataNascimento` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	`nomeMae` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_bin',
+	PRIMARY KEY (`uid`),
+	INDEX `login` (`login`)
+)
+COLLATE='latin1_bin'
+ENGINE=InnoDB
+AUTO_INCREMENT=21;
+
+
+TABELA usuarios_niveis
+CREATE TABLE `usuarios_niveis` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`composicao` VARCHAR(45) NOT NULL,
+	`descricao` VARCHAR(90) NOT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=6;

@@ -1,0 +1,127 @@
+/*
+@font-face
+{
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('open sans light'), local('opensans-light'), url(fonts/open-sans-light.woff) format('woff');
+}
+@font-face
+{
+	font-family: 'open sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('open sans'), local('opensans'), url(fonts/open-sans.woff) format('woff');
+}
+*/
+@font-face
+{
+	font-family: 'roboto';
+	font-style: normal;
+	font-weight: 100;
+	src: local('roboto thin'), local('roboto-thin'), url(fonts/roboto-thin.woff) format('woff');
+}
+@font-face
+{
+	font-family: 'roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: local('roboto light'), local('roboto-light'), url(fonts/roboto-light.woff) format('woff');
+}
+@font-face
+{
+	font-family: 'roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('roboto regular'), local('roboto-regular'), url(fonts/roboto-regular.woff) format('woff');
+}
+html
+{ display: block; }
+body
+{
+	padding: 0; margin: 0;
+	background-color: #fff;
+	display: block;
+	font-family: "roboto", arial, sans-serif; font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6
+{ font-style: normal; font-weight: 100; line-height: 1.15em; margin: 0 0 .3em 0; font-family: "roboto", arial, sans-serif; font-weight: 300; }
+.barspace
+{ height: 41px; }
+#lefter
+{ position: absolute; width: 200px; background-color: #252528; box-shadow: inset -5px 10px 10px #222; overflow-x: hidden; overflow-y: visible; bottom: 0; top: 0; display: block; }
+.lefter_list
+{ display: block; }
+.lefter_item
+{
+	display: block;
+	padding: 15px 20px; color: #ccc; background: rgb(31,31,33);
+	background: rgb(49,49,53);
+	background: -moz-linear-gradient(top,  rgba(49,49,53,1) 0%, rgba(31,31,33,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(49,49,53,1)), color-stop(100%,rgba(31,31,33,1)));
+	background: -webkit-linear-gradient(top,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	background: -o-linear-gradient(top,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	background: linear-gradient(to bottom,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	filter: progid:dximagetransform.microsoft.gradient( startcolorstr='#313135', endcolorstr='#1f1f21',gradienttype=0 );
+	border-bottom: 1px solid #333; cursor: pointer; font-weight: bold;
+}
+.lefter_item:hover
+{
+	color: #fff;
+	background: #1f1f21;
+}
+#righter
+{ position: absolute; left: 200px; right: 0px; background: transparent; overflow-x: hidden; overflow-y: visible; bottom: 0; top: 0; display: block; }
+/******************/
+.perse_stbar
+{ position: relative; display: block; height: 155px; background: url(img/bg_slice_none.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; box-shadow: inset 0px -1px 3px #666; transition: background 0.5s linear; -moz-transition: background 0.5s linear; -webkit-transition: background 0.5s linear; -o-transition: background 0.5s linear; }
+#perse_stbar_alt
+{ display: none; }
+.perse_stbar_corner
+{ display: inline-block; border-radius: 0px 0px 10px 0px; padding: 10px 30px; background: rgba(255,255,255,.1); }
+/******************/
+.about_on
+{ background: url(img/demeter.png) center center no-repeat; height: 387px; }
+.about_on:hover > .about_off
+{ background: rgba(255,255,255,.8); visibility: visible; min-height: 387px; }
+.about_off
+{ visibility: hidden; }
+/******************/
+	
+#tab1 h1, #tab1 h2
+{ color: #009f3c; }
+#tab2 h1, #tab2 h2
+{ color: #ef9c00; }
+#tab3 h1, #tab3 h2
+{ color: #4d0ca6; }
+
+.head_sort
+{ padding: 0px 110px; }
+	/******************/
+	.tab-content
+	{ overflow: hidden !important; }
+	#blured-loading
+	{ background: rgba(255,255,255,.5); position: absolute; top: 0; bottom: 0; right: 0; left: 0; }
+@media only screen and (max-width: 980px)
+{
+	.barspace
+	{ height: 0px; }
+	.navbar-fixed-top
+	{ margin: 0px; }
+	#lefter, .perse_stbar
+	{ display: none; }
+	#perse_stbar_alt
+	{ display: block; }
+	#righter
+	{ left: 0; }
+	.head_sort
+	{ padding: 0px 90px; }
+	#lefter, #righter
+	{ display: block; position: relative; width: auto; }
+	}
+	@media only screen and (min-device-width: 481px)
+	{
+	html
+	{ -webkit-text-size-adjust: 140%; }
+}

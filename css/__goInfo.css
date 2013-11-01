@@ -1,0 +1,133 @@
+*
+{	font-family: "roboto";
+}
+.full_background
+{	display: block; position: absolute; z-index: -1;
+	background: url(../img/bg_home_main.jpg) no-repeat center center; background-size: cover;
+	top: 41px; bottom: 0; left: 0; right: 0;
+}
+.white_box
+{	max-width: 300px; padding: 19px 29px 29px; margin: 0; background-color: #fff;
+	border: 1px solid #e5e5e5; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05); box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.statistics h1, .statistics h2, .statistics h3, .statistics h4
+{	color: white;
+}
+.statistics
+{	background: #1f253d;
+	top: 0; bottom: 0; left: 0; right: 0; position: fixed; z-index: 1; overflow-y: auto; overflow-x: hidden;
+}
+.main-cont
+{	background: #1f253d; display: block; padding: 20px 0px; color: #9099b7;
+}
+.main-box
+{	background: #394264; padding: 20px;
+	-webkit-transition-property: background, color; transition-property: background, color;
+	-webkit-transition-duration: 0.1s, 0.3s; transition-duration: 0.1s, 0.3s;
+	-webkit-transition-timing-function: ease-in, linear; transition-timing-function: ease-in, linear;
+	-webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.main-box:hover
+{	background: #50597b; color: white;
+}
+.main-title
+{	display: block; color: white; font-weight: 300; text-align: center; padding: 10px 10px; text-transform:uppercase; text-shadow: 0px 0px 10px #ffffff;
+}
+.inner-title
+{	text-align: center; padding: 5px 0px; background: rgba(0,0,0,0.1);
+}
+.inner-box
+{	padding-left: 25px; padding-top: 25px;
+	text-shadow: 0px 0px 5px #6C6C6C;
+	filter: dropshadow(color=#6C6C6C, offx=0, offy=0);
+	-webkit-transition-property: background, color, text-shadow; transition-property: background, color, text-shadow;
+	-webkit-transition-duration: 0.1s, 0.3s, 1s; transition-duration: 0.1s, 0.3s, 1s;
+	-webkit-transition-timing-function: ease-in, linear, ease-in-out; transition-timing-function: ease-in, linear, ease-in-out;
+}
+.main-box:hover .inner-box
+{	color: #FFFFFF; border-radius: 0px 0px 10px 10px;
+	background: rgb(71,79,110);
+	background: -moz-linear-gradient(top,  rgba(71,79,110,1) 0%, rgba(80,89,123,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,79,110,1)), color-stop(100%,rgba(80,89,123,1)));
+	background: -webkit-linear-gradient(top,  rgba(71,79,110,1) 0%,rgba(80,89,123,1) 100%);
+	background: -o-linear-gradient(top,  rgba(71,79,110,1) 0%,rgba(80,89,123,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(71,79,110,1) 0%,rgba(80,89,123,1) 100%);
+	background: linear-gradient(to bottom,  rgba(71,79,110,1) 0%,rgba(80,89,123,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474f6e', endColorstr='#50597b',GradientType=0 );
+	text-shadow: 0px 0px 10px #ffffff;
+	filter: dropshadow(color=#ffffff, offx=0, offy=0);
+}
+.main-box:hover .inner-title
+{	background: #e64c65 !important; color: #FFFFFF; border-radius: 10px 10px 0px 0px;
+	-webkit-transition-property: background, color; transition-property: background, color;
+	-webkit-transition-duration: 1s, 0.3s; transition-duration: 1s, 0.3s;
+	-webkit-transition-timing-function: ease-in-out, linear; transition-timing-function: ease-in-out, linear;
+}
+.pinked
+{	background: #cc324b;
+}
+.blured
+{	background: #11a8ab;
+}
+.oranged
+{	background: #fcb150;
+}
+.faced-in
+{	background: #1a4e95; color: white !important;
+}
+.faced-out, .faced-out:hover
+{	background: #3468af; color: white !important;
+}
+.tweeted
+{	background: #35aadc;
+}
+.timer
+{	position: relative;
+	font-size: 150px;
+	width:1em;
+	height:1em;
+}
+.timer > .percent
+{	position: absolute;
+	top: 1.25em;
+	left: 0.5em;
+	width: 3.33em;
+	font-size: 0.2em;
+	text-align:center;
+}
+.timer > #slice
+{	position:absolute;
+	width:1em;
+	height:1em;
+	clip:rect(0px,1em,1em,0.5em);
+}
+.timer > #slice.gt50
+{	clip:rect(auto, auto, auto, auto);
+}
+.timer > #slice > .pie
+{	border: 0.1em solid #c0c0c0;
+	position:absolute;
+	width:0.8em; /* 1 - (2 * border width) */
+	height:0.8em; /* 1 - (2 * border width) */
+	clip:rect(0em,0.5em,1em,0em);
+	-moz-border-radius:0.5em;
+	-webkit-border-radius:0.5em; 
+	border-radius:0.5em;
+	border-color: #9099b7;
+}
+.timer > #slice > .pie.fill
+{	-moz-transform:rotate(180deg) !important;
+	-webkit-transform:rotate(180deg) !important;
+	-o-transform:rotate(180deg) !important;
+	transform:rotate(180deg) !important;
+}
+.timer.fill > .percent
+{	display: none;
+}
+.timer.fill > #slice > .pie
+{	border: transparent;
+	background-color: #c0c0c0;
+	width:1em;
+	height:1em;
+}

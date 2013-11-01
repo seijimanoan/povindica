@@ -1,0 +1,93 @@
+/*
+//	The goTurno's layout schema
+*/
+#lefter
+{	position: absolute; width: 60px; background-color: #252528; box-shadow: inset -5px 10px 10px #222; overflow-x: hidden; overflow-y: visible; bottom: 0; top: 0; display: block;
+}
+.lefter_list
+{	display: block;
+}
+.lefter_item
+{	text-align: center;
+	display: block;
+	padding: 10px; color: #ccc; background: rgb(31,31,33);
+	background: rgb(49,49,53);
+	background: -moz-linear-gradient(top,  rgba(49,49,53,1) 0%, rgba(31,31,33,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(49,49,53,1)), color-stop(100%,rgba(31,31,33,1)));
+	background: -webkit-linear-gradient(top,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	background: -o-linear-gradient(top,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	background: linear-gradient(to bottom,  rgba(49,49,53,1) 0%,rgba(31,31,33,1) 100%);
+	filter: progid:dximagetransform.microsoft.gradient( startcolorstr='#313135', endcolorstr='#1f1f21',gradienttype=0 );
+	border-bottom: 1px solid #333; cursor: pointer; font-weight: bold;
+}
+.lefter_item:hover
+{	text-decoration: none;
+	color: #fff;
+	background: #1f1f21;
+}
+#righter
+{	position: absolute; left: 60px; right: 0px; background: transparent; overflow-x: hidden; overflow-y: visible; bottom: 0; top: 0; display: block;
+}
+/******************/
+#onCreation h1, #onCreation h2
+{ color: #009f3c; }
+#onVisualization h1, #onVisualization h2
+{ color: #ef9c00; }
+#onReport h1, #onReport h2
+{ color: #4d0ca6; }
+
+.head_sort
+{ padding: 0px 110px; }
+/******************/
+#await_turn_to_show
+{ display: none; }
+.denial_blocks
+{ display: none; border-left: solid 5px rgb(0,183,234); }
+.denial_hidden
+{ background: whitesmoke; }
+.denial_hidden:hover
+{ background: transparent; }
+.tab-content
+{ overflow: hidden !important; margin: 0; padding: 0; }
+#righter div[class^="span"]
+{ margin: 0 !important; }
+.controller_bottom
+{
+	margin-top: 100px;
+	padding: 30px;
+	border-top: 1px solid #E3E3E3;
+	background: whitesmoke;
+	display: block;
+}
+.table_head_inverse
+{
+	background: #3b3e43;
+	color: #FFF; border-bottom: solid 1px #00A0FC;
+}
+.table_body_inverse
+{
+	background: #43464b; color: #FFF;
+}
+#lefter::-webkit-scrollbar
+{	width: 6px; height: 6px;
+}
+#lefter::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment
+{	display: none;
+}
+#lefter::-webkit-scrollbar-track-piece
+{	background-color: #3b3b3b; -webkit-border-radius: 6px;
+}
+#lefter::-webkit-scrollbar-thumb:vertical
+{	-webkit-border-radius: 6px;
+	background: #666; border: #333 solid 1px;
+}
+@media (max-width: 979px)
+{
+	.navbar-fixed-top
+	{ margin: 0px; }
+	#lefter
+	{ display: none; }
+	#righter
+	{ display: block; position: relative; width: auto; left: 0; }
+}
